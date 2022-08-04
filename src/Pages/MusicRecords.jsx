@@ -7,24 +7,23 @@ import { useLocation, useSearchParams } from "react-router-dom";
 
 const MusicRecords = () => {
 	const dispatch = useDispatch();
-  const location=useLocation()
+	const location = useLocation();
 
 	const musicRecords = useSelector((store) => store.musicRecords);
 	const [searchParams] = useSearchParams();
 
 	useEffect(() => {
 		if (musicRecords.length === 0 || location) {
-      const sortBy=searchParams.get("sortBy")
+			const sortBy = searchParams.get("sortBy");
 			const queryParams = {
 				params: {
 					genre: searchParams.getAll("genre"),
-          _sort:sortBy && 'year',
-          _order:sortBy,
+					_sort: sortBy && "year",
+					_order: sortBy,
 				},
 			};
-      dispatch(getMusicRecords(queryParams));
+			dispatch(getMusicRecords(queryParams));
 		}
-	
 	}, [location.search]);
 	// console.log(musicRecords)
 	return (

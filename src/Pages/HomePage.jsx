@@ -9,7 +9,6 @@ const HomePage = () => {
 			<h3>MUSIC RECORDES</h3>
 			<HomePageWrapper>
 				<FilterSortWrapper>
-
 					<FilterSort />
 				</FilterSortWrapper>
 				<MusicRecordsWrapper>
@@ -29,15 +28,14 @@ const HomePageWrapper = styled.div`
 
 const FilterSortWrapper = styled.div`
 	width: 400px;
-	border: 1px solid red;
+	border: 1px solid blue;
 `;
 
 const MusicRecordsWrapper = styled.div`
 	width: 100%;
-	border: 1px solid red;
-  display:grid;
-  grid-template-columns:reapeat(auto-fit,minimax(300px,max-content));
-  justify-content:center;
-  grid-gap:10px
-  
+	border: 1px solid blue;
+	display: grid;
+	grid-template-columns: reapeat(auto-fit, minimax(300px, max-content));
+	justify-content: center;
+	grid-gap: 10px;
 `;

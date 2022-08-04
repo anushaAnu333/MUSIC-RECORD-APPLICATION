@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SingleMusicRecord = () => {
-  return (
-    <div>SingleMusicRecord</div>
-  )
-}
+	return <div>SingleMusicRecord</div>;
+};
 
-export default SingleMusicRecord
+export default SingleMusicRecord;

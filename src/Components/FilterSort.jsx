@@ -5,13 +5,12 @@ const FilterSort = () => {
 	const [searchParams, setSearchPrams] = useSearchParams();
 	const initialGenreParams = searchParams.getAll("genre");
 	const [category, setCategory] = useState(initialGenreParams || []);
-	const initialSortParams=searchParams.getAll("sortBy")
-	const [sortBy,setSortBy]=useState(initialSortParams[0] || "")
-	
-	
-	const handleSort=(e)=>{
-setSortBy(e.target.value)
-	}
+	const initialSortParams = searchParams.getAll("sortBy");
+	const [sortBy, setSortBy] = useState(initialSortParams[0] || "");
+
+	const handleSort = (e) => {
+		setSortBy(e.target.value);
+	};
 
 	const handleGenreChange = (e) => {
 		const option = e.target.value;
@@ -25,11 +24,11 @@ setSortBy(e.target.value)
 	};
 	// console.log(category)
 	useEffect(() => {
-		setSearchPrams({ genre: category,sortBy:sortBy });
-	}, [category, setSearchPrams,sortBy]);
+		setSearchPrams({ genre: category, sortBy: sortBy });
+	}, [category, setSearchPrams, sortBy]);
 	// console.log(searchParams.getAll("genre"));
 
-	console.log(initialSortParams)
+	console.log(initialSortParams);
 	return (
 		<div>
 			<h3>Filter</h3>

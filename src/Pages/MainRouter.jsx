@@ -5,11 +5,10 @@ import SingleMusicRecord from "./SingleMusicRecord";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage";
 
-
 const MainRouter = () => {
 	return (
 		<Routes>
-			<Route path="/" element={<HomePage/>} />
+			<Route path="/" element={<HomePage />} />
 			<Route path="/music/:id" element={<SingleMusicRecord />} />
 			<Route path="/music/:id/edit" element={<EditMusicRecord />} />
 			<Route path="/login" element={<Login />} />
