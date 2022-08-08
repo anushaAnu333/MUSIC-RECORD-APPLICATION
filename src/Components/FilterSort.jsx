@@ -80,8 +80,7 @@ const FilterSort = () => {
 			<div>
 				<input
 					type="checkbox"
-					defaultChecked={category.includes("Singer/Songwriter")}
-					value="Singer/Songwriter"
+					defaultChecked={category.includes("Singer/Songwriter")} 
 					onChange={handleGenreChange}
 				/>
 				<label>Singer/Songwriter</label>
